@@ -38,6 +38,7 @@ function CreateOrder() {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
 
+  // useActionData hook allows to get any data available as result of the action perfomed related to the route and the component
   const formErrors = useActionData();
 
   const cart = fakeCart;
