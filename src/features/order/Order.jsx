@@ -88,6 +88,7 @@ function Order() {
   );
 }
 
+//loader are used to read data
 export async function loader({ params }) {
   const order = await getOrder(params.orderId);
   return order;
