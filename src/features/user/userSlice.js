@@ -1,3 +1,33 @@
+const { createSlice } = require("@reduxjs/toolkit");
+
+
+const initialState = {
+  name: "",
+  phone: "",
+  address: "",
+  position: {
+    latitude: "", 
+    longitude: ""
+  },
+  orders: []
+}
+
+const userSlice = createSlice({
+  name: "user",
+  initialState,
+  reducers: {
+    createUser(){},
+    updateUser(){},
+    getPosition(){},
+    getAddress(){}
+  }
+})
+
+
+export default userSlice.reducer
+
+
+
 function getPosition() {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(resolve, reject);
